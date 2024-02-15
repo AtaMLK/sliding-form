@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+$font-family: "Poppins", sans-serif;
+$font-size: 16px;
+$bg-color: #efefef;
+$overlay: linear-gradiant(to right, rgb(214, 91, 9), rgb(218, 7, 7));
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-family;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: $bg-color;
+}
+
+.container {
+  background: #fff;
+  border: 1px solid #cfcfcf;
+  border-radius: 3px;
+  display: flex;
+  justify-content: space-between;
+  height: 22rem;
+  width: 35rem;
+  .left {
+    position: relative;
+    width: 50%;
+    .singIn_card {
+      position: absolute;
+      top: 0;
+      margin: 3rem ;
+      .singIn_card--title {
+        font-size: $font-size - 3px;
+        text-align: center;
+      }
+      .social {
+        text-align: center;
+        a {
+          text-decoration: none;
+          padding: 1rem 0.5rem;
+          font-size: $font-size + 16px;
+          line-height: 25px;
+        }
+        .fa-facebook {
+          color: blue;
+        }
+        .fa-linkedin {
+          color: rgb(25, 25, 134);
+        }
+        .fa-google-plus-g {
+          color: red;
+        }
+      }
+      p {
+        text-align: center;
+      }
+      form {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        input {
+          margin: 0.8rem auto;
+          outline: 0;
+          border: none;
+          border-bottom: 1px solid #cfcfcf;
+          &[type="button"] {
+            padding: 0.2rem 0.8rem;
+            border: none;
+            border-radius: 3px;
+            color: #fff;
+            background-color: #51bb6b;
+            &:active{
+                transform: scale(0.9);
+            }
+          }
+        }
+      }
+    }
+    .singUp_card {
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        margin: 1.5rem;
+        .singIn_card--title {
+          font-size: $font-size - 3px;
+          text-align: center;
+        }
+        .social {
+          text-align: center;
+          a {
+            text-decoration: none;
+            padding: 1rem 0.5rem;
+            font-size: $font-size + 16px;
+            line-height: 25px;
+          }
+          .fa-facebook {
+            color: blue;
+          }
+          .fa-linkedin {
+            color: rgb(25, 25, 134);
+          }
+          .fa-google-plus-g {
+            color: red;
+          }
+        }
+        p {
+          text-align: center;
+        }
+        form {
+          width: 100%;
+          display: flex;
+          justify-content: space-evenly;
+          flex-direction: column;
+          align-items: center;
+          input {
+            margin: 0.8rem auto;
+            outline: 0;
+            border: none;
+            border-bottom: 1px solid #cfcfcf;
+            &[type="button"] {
+              padding: 0.2rem 0.8rem;
+              border: none;
+              border-radius: 3px;
+              color: #fff;
+              background-color: #51bb6b;
+              &:active{
+                  transform: scale(0.9);
+              }
+            }
+          }
+        }
+    }
+  }
+  .overlay {
+    opacity: 0;
+  }
+}
