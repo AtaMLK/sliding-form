@@ -24,18 +24,19 @@ body {
 .container {
   background: #fff;
   border: 1px solid #cfcfcf;
-  border-radius: 3px;
+  border-radius: 5px;
   display: flex;
   justify-content: space-between;
   height: 22rem;
   width: 35rem;
+  box-shadow: 0 0 2px 2px #d8d8d8;
   .left {
     position: relative;
     width: 50%;
     .singIn_card {
       position: absolute;
       top: 0;
-      margin: 3rem ;
+      margin: 3rem;
       .singIn_card--title {
         font-size: $font-size - 3px;
         text-align: center;
@@ -78,69 +79,128 @@ body {
             border-radius: 3px;
             color: #fff;
             background-color: #51bb6b;
-            &:active{
-                transform: scale(0.9);
+            &:active {
+              transform: scale(0.9);
             }
           }
         }
       }
     }
     .singUp_card {
-        z-index: -1;
-        position: absolute;
-        top: 0;
-        margin: 1.5rem;
-        .singIn_card--title {
-          font-size: $font-size - 3px;
-          text-align: center;
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      margin: 1.5rem;
+      .singIn_card--title {
+        font-size: $font-size - 3px;
+        text-align: center;
+      }
+      .social {
+        text-align: center;
+        a {
+          text-decoration: none;
+          padding: 1rem 0.5rem;
+          font-size: $font-size + 16px;
+          line-height: 25px;
         }
-        .social {
-          text-align: center;
-          a {
-            text-decoration: none;
-            padding: 1rem 0.5rem;
-            font-size: $font-size + 16px;
-            line-height: 25px;
-          }
-          .fa-facebook {
-            color: blue;
-          }
-          .fa-linkedin {
-            color: rgb(25, 25, 134);
-          }
-          .fa-google-plus-g {
-            color: red;
-          }
+        .fa-facebook {
+          color: blue;
         }
-        p {
-          text-align: center;
+        .fa-linkedin {
+          color: rgb(25, 25, 134);
         }
-        form {
-          width: 100%;
-          display: flex;
-          justify-content: space-evenly;
-          flex-direction: column;
-          align-items: center;
-          input {
-            margin: 0.8rem auto;
-            outline: 0;
+        .fa-google-plus-g {
+          color: red;
+        }
+      }
+      p {
+        text-align: center;
+      }
+      form {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        input {
+          margin: 0.8rem auto;
+          outline: 0;
+          border: none;
+          border-bottom: 1px solid #cfcfcf;
+          &[type="button"] {
+            padding: 0.2rem 0.8rem;
             border: none;
-            border-bottom: 1px solid #cfcfcf;
-            &[type="button"] {
-              padding: 0.2rem 0.8rem;
-              border: none;
-              border-radius: 3px;
-              color: #fff;
-              background-color: #51bb6b;
-              &:active{
-                  transform: scale(0.9);
-              }
+            border-radius: 3px;
+            color: #fff;
+            background-color: #51bb6b;
+            &:active {
+              transform: scale(0.9);
             }
           }
         }
+      }
     }
   }
   .overlay {
-    opacity: 0;
+    position: relative;
+    width: 50%;
+    text-align: center;
+    background-color: rgba(219, 38, 6, 0.815);
+    border-radius: 0 5px 5px 0;
+    .singIn_overlay {
+      position: absolute;
+      text-wrap: nowrap;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      .title {
+        font-size: $font-size;
+      }
+      p {
+        font-size: $font-size - 4px;
+        margin-top: 0.5rem;
+      }
+      button {
+        border: 1px solid #fff;
+        outline: none;
+        border-radius: 3px;
+        padding: 0.2rem 0.8rem;
+        margin-top: 1rem;
+        color: #fff;
+        background-color: transparent;
+        &:active {
+          transform: scale(0.9);
+        }
+      }
+    }
+    .singUp_overlay {
+        z-index: -1;
+        position: absolute;
+        text-wrap: nowrap;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        .title {
+          font-size: $font-size;
+        }
+        p {
+          font-size: $font-size - 4px;
+          margin-top: 0.5rem;
+        }
+        button {
+          border: 1px solid #fff;
+          outline: none;
+          border-radius: 3px;
+          padding: 0.2rem 0.8rem;
+          margin-top: 1rem;
+          color: #fff;
+          background-color: transparent;
+          &:active {
+            transform: scale(0.9);
+          }
+        }
+      }
   }
 }
