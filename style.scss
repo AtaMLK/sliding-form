@@ -20,6 +20,11 @@ body {
   height: 100vh;
   background-color: $bg-color;
 }
+.hidden{
+    visibility: none;
+    opacity: 0;
+
+}
 
 .container {
   background: #fff;
@@ -37,6 +42,7 @@ body {
       position: absolute;
       top: 0;
       margin: 3rem;
+      transition: all 1s ease-in;
       .singIn_card--title {
         font-size: $font-size - 3px;
         text-align: center;
@@ -87,7 +93,6 @@ body {
       }
     }
     .singUp_card {
-      z-index: -1;
       position: absolute;
       top: 0;
       margin: 1.5rem;
@@ -145,8 +150,9 @@ body {
     position: relative;
     width: 50%;
     text-align: center;
-    background-color: rgba(219, 38, 6, 0.815);
-    border-radius: 0 5px 5px 0;
+    background: rgb(226,37,16);
+    background: linear-gradient(90deg, rgba(226,37,16,1) 0%, rgba(235,93,46,1) 43%, rgba(255,29,0,1) 100%);
+    transition: all 1s ease-in-out;
     .singIn_overlay {
       position: absolute;
       text-wrap: nowrap;
@@ -175,32 +181,31 @@ body {
       }
     }
     .singUp_overlay {
-        z-index: -1;
-        position: absolute;
-        text-wrap: nowrap;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+      position: absolute;
+      text-wrap: nowrap;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      .title {
+        font-size: $font-size;
+      }
+      p {
+        font-size: $font-size - 4px;
+        margin-top: 0.5rem;
+      }
+      button {
+        border: 1px solid #fff;
+        outline: none;
+        border-radius: 3px;
+        padding: 0.2rem 0.8rem;
+        margin-top: 1rem;
         color: #fff;
-        .title {
-          font-size: $font-size;
-        }
-        p {
-          font-size: $font-size - 4px;
-          margin-top: 0.5rem;
-        }
-        button {
-          border: 1px solid #fff;
-          outline: none;
-          border-radius: 3px;
-          padding: 0.2rem 0.8rem;
-          margin-top: 1rem;
-          color: #fff;
-          background-color: transparent;
-          &:active {
-            transform: scale(0.9);
-          }
+        background-color: transparent;
+        &:active {
+          transform: scale(0.9);
         }
       }
+    }
   }
 }

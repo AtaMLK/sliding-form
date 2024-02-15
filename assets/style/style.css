@@ -15,6 +15,11 @@ body {
   background-color: #efefef;
 }
 
+.hidden {
+  visibility: none;
+  opacity: 0;
+}
+
 .container {
   background: #fff;
   border: 1px solid #cfcfcf;
@@ -33,6 +38,7 @@ body {
   position: absolute;
   top: 0;
   margin: 3rem;
+  transition: all 1s ease-in;
 }
 .container .left .singIn_card .singIn_card--title {
   font-size: 13px;
@@ -83,7 +89,6 @@ body {
   transform: scale(0.9);
 }
 .container .left .singUp_card {
-  z-index: -1;
   position: absolute;
   top: 0;
   margin: 1.5rem;
@@ -140,8 +145,9 @@ body {
   position: relative;
   width: 50%;
   text-align: center;
-  background-color: rgba(219, 38, 6, 0.815);
-  border-radius: 0 5px 5px 0;
+  background: rgb(226, 37, 16);
+  background: linear-gradient(90deg, rgb(226, 37, 16) 0%, rgb(235, 93, 46) 43%, rgb(255, 29, 0) 100%);
+  transition: all 1s ease-in-out;
 }
 .container .overlay .singIn_overlay {
   position: absolute;
@@ -171,7 +177,6 @@ body {
   transform: scale(0.9);
 }
 .container .overlay .singUp_overlay {
-  z-index: -1;
   position: absolute;
   text-wrap: nowrap;
   top: 50%;
