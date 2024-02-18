@@ -20,10 +20,9 @@ body {
   height: 100vh;
   background-color: $bg-color;
 }
-.hidden{
-    visibility: none;
-    opacity: 0;
-
+.hidden {
+  z-index: -5;
+  opacity: 0;
 }
 
 .container {
@@ -38,11 +37,16 @@ body {
   .left {
     position: relative;
     width: 50%;
+    transition: all 1s ease-in-out;
+    transition-delay: 0.5;
     .singIn_card {
       position: absolute;
-      top: 0;
-      margin: 3rem;
-      transition: all 1s ease-in;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 1.8rem;
+      width: 100%;
       .singIn_card--title {
         font-size: $font-size - 3px;
         text-align: center;
@@ -94,11 +98,14 @@ body {
     }
     .singUp_card {
       position: absolute;
-      top: 0;
-      margin: 1.5rem;
-      .singIn_card--title {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 1.8rem;
+      width: 100%;
+      .singUp_card--title {
         font-size: $font-size - 3px;
-        text-align: center;
       }
       .social {
         text-align: center;
@@ -150,9 +157,14 @@ body {
     position: relative;
     width: 50%;
     text-align: center;
-    background: rgb(226,37,16);
-    background: linear-gradient(90deg, rgba(226,37,16,1) 0%, rgba(235,93,46,1) 43%, rgba(255,29,0,1) 100%);
-    transition: all 1s ease-in-out;
+    background: rgb(226, 37, 16);
+    background: linear-gradient(
+      90deg,
+      rgba(226, 37, 16, 1) 0%,
+      rgba(235, 93, 46, 1) 43%,
+      rgba(255, 29, 0, 1) 100%
+    );
+    transition: all 0.7s ease-in-out;
     .singIn_overlay {
       position: absolute;
       text-wrap: nowrap;

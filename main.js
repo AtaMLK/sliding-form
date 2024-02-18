@@ -11,16 +11,16 @@ const rightSide = document.querySelector(".overlay");
 overlayBtn1.addEventListener("click", function () {
   singIn.classList.toggle("hidden");
   singUp.classList.toggle("hidden");
-  leftSide.style.translate = "translateX(-50%)";
-  rightSide.style.translate = "translateX(50%)";
+  leftSide.style.transform = "translateX(+100%)";
+  rightSide.style.transform = "translateX(-100%)";
   singInOverlay.classList.toggle("hidden");
   singUpOverlay.classList.toggle("hidden");
 });
 overlayBtn2.addEventListener("click", function () {
   singIn.classList.toggle("hidden");
   singUp.classList.toggle("hidden");
-  leftSide.translate = "translateX(-50%)";
-  rightSide.translate = "translateX(50%)";
+  leftSide.style.transform = "translateX(0)";
+  rightSide.style.transform = "translateX(0)";
   singInOverlay.classList.toggle("hidden");
   singUpOverlay.classList.toggle("hidden");
 });

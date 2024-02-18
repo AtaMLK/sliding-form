@@ -16,7 +16,7 @@ body {
 }
 
 .hidden {
-  visibility: none;
+  z-index: -5;
   opacity: 0;
 }
 
@@ -33,12 +33,17 @@ body {
 .container .left {
   position: relative;
   width: 50%;
+  transition: all 1s ease-in-out;
+  transition-delay: 0.5;
 }
 .container .left .singIn_card {
   position: absolute;
-  top: 0;
-  margin: 3rem;
-  transition: all 1s ease-in;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.8rem;
+  width: 100%;
 }
 .container .left .singIn_card .singIn_card--title {
   font-size: 13px;
@@ -90,12 +95,15 @@ body {
 }
 .container .left .singUp_card {
   position: absolute;
-  top: 0;
-  margin: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.8rem;
+  width: 100%;
 }
-.container .left .singUp_card .singIn_card--title {
+.container .left .singUp_card .singUp_card--title {
   font-size: 13px;
-  text-align: center;
 }
 .container .left .singUp_card .social {
   text-align: center;
@@ -147,7 +155,7 @@ body {
   text-align: center;
   background: rgb(226, 37, 16);
   background: linear-gradient(90deg, rgb(226, 37, 16) 0%, rgb(235, 93, 46) 43%, rgb(255, 29, 0) 100%);
-  transition: all 1s ease-in-out;
+  transition: all 0.7s ease-in-out;
 }
 .container .overlay .singIn_overlay {
   position: absolute;
